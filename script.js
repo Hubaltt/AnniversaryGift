@@ -1,63 +1,38 @@
-
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-
   if (scrollTop < lastScrollTop) {
     header.style.transform = "translateY(0)";
-  } 
-
-  else if (scrollTop > lastScrollTop) {
+  } else if (scrollTop > lastScrollTop) {
     header.style.transform = "translateY(-100%)";
   }
-
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
- const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const el = entry.target;
-      if (entry.isIntersecting) {	
-        el.classList.add('show');
-      } else {
-        el.classList.remove('show');
-      }
-    });
-  }, {
-    threshold: 0.3
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const el = entry.target;
+    if (entry.isIntersecting) {
+      el.classList.add('show');
+    } else {
+      el.classList.remove('show');
+    }
   });
+}, { threshold: 0.3 });
 
-  const Homeletter = document.querySelector('.Home-letter');
-  observer.observe(Homeletter);
+const Homeletter = document.querySelector('.Home-letter');
+if (Homeletter) observer.observe(Homeletter);
 
 const HomePhotos = document.querySelector('.Home-Photos');
-if (HomePhotos) {
-  observer.observe(HomePhotos);
-}
+if (HomePhotos) observer.observe(HomePhotos);
+
 const songs = [
-  {
-    title: "If",
-    artist: "Bread",
-    src: "If.mp3"// Ikaunang kanta eyeyeyy
-  },
-  {
-    title: "Kingston",
-    artist: "Faye Webster",
-    src: "Kingston.mp3" // Ikalawang kanta eyeyeyy
-  },
-  {
-    title: "Nothing",
-    artist: "Bruno Major",
-    src: "Nothing.mp3" // Ikatlomng kanta eyeyeyy
-  },
-  {
-	title: "Seasons",
-	artist: "Wave to Earth",
-	src: "Seasons.mp3",
-  },
+  { title: "If", artist: "Bread", src: "If.mp3" },
+  { title: "Kingston", artist: "Faye Webster", src: "Kingston.mp3" },
+  { title: "Nothing", artist: "Bruno Major", src: "Nothing.mp3" },
+  { title: "Seasons", artist: "Wave to Earth", src: "Seasons.mp3" },
 ];
 
 let currentSongIndex = 0;
@@ -89,11 +64,8 @@ function prevSong() {
 }
 
 function togglePlay() {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
+  if (audio.paused) audio.play();
+  else audio.pause();
 }
 
 document.getElementById("play").addEventListener("click", togglePlay);
@@ -120,19 +92,16 @@ progressBar.addEventListener("input", () => {
 
 loadSong(currentSongIndex);
 
-
 const bookObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const flowers = entry.target.querySelectorAll('.flower');
-    
     if (entry.isIntersecting) {
       flowers.forEach(f => f.classList.add('show'));
     } else {
       flowers.forEach(f => f.classList.remove('show'));
     }
   });
-}, { threshold: 0.5 }); 	
+}, { threshold: 0.5 });
 
 const bookSection = document.querySelector('#Gallery');
 if (bookSection) bookObserver.observe(bookSection);
-
