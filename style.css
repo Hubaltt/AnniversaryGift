@@ -1,75 +1,71 @@
-header{
-	position:fixed;
-	top: 0;
-	left: 0;
-	width: 98.3%;
-	height: 5%;
-	background-color: #ffcaf4;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 8px 20px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	z-index: 1000;
-	transition: transform 0.3s ease, opacity 0.3s ease;
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98.3%;
+  height: 5%;
+  background-color: #ffcaf4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-section {
-  min-height: 100vh; 
-  padding: 100px 60px; 
-  box-sizing: border-box;
 
+section {
+  min-height: 100vh;
+  padding: 100px 60px;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.logo{
-	font-weight: bold;
-	color: black;
-	margin-right: 8px;
+.logo {
+  font-weight: bold;
+  color: black;
+  margin-right: 8px;
 }
-nav a{
-	font-family: 'Dancing Script', cursive;
-	display: inline-block;      
-	background-color: #fca2e9;
-	color:black;
-	text-decoration: none;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 4px 18px;
-	margin-left: 8px;
-	font-size: 0.8rem;
-	
-	
-	transition: background-color 0.2s ease, transform 0.3s ease;
-	will-change: transform;
+
+nav a {
+  font-family: 'Dancing Script', cursive;
+  display: inline-block;
+  background-color: #fca2e9;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px 18px;
+  margin-left: 8px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease, transform 0.3s ease;
+  will-change: transform;
 }
+
 nav a:hover {
-	background-color: #ffd3f6;
-	transform: translateY(-3px);
+  background-color: #ffd3f6;
+  transform: translateY(-3px);
 }
-/* Ito ay para sa letter sa Home page*/
+
 #Home {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   padding: 40px;
 }
 
 .Home-letter {
   position: relative;
-  max-width: 400px; 
-  height: auto;
-  margin-left: 20px;           
-  margin-right: 5%;              
-  background-color: #ffe4f7;    
-  padding: 40px 25px;    	                   
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  box-sizing: border-box;
-
-  transform: translateX(100px);  
+  max-width: 400px;
+  margin-left: 20px;
+  margin-right: 5%;
+  background-color: #ffe4f7;
+  padding: 40px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100px);
   opacity: 0;
   transition: all 0.8s ease-out;
 }
@@ -80,9 +76,9 @@ nav a:hover {
 }
 
 .Home-Photos {
-  position: relative;		
+  position: relative;
   width: 450px;
-  height: 420px;      
+  height: 420px;
   max-width: 450px;
 }
 
@@ -94,27 +90,23 @@ nav a:hover {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-
 }
-
 
 .Home-Photos.show img {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Ito ay para sa delay ng bawat imahe eyeyyy*/
 .Home-Photos img:nth-child(1) {
-  position: absolute;
   top: 0;
   left: 220px;
   transform: rotate(-5deg);
   transition-delay: 0.2s;
   z-index: 1;
 }
+
 .Home-Photos img:nth-child(2) {
-  position: absolute;
-  height:	 320px;
+  height: 320px;
   width: 300px;
   top: 200px;
   left: 420px;
@@ -123,7 +115,6 @@ nav a:hover {
 }
 
 .Home-Photos img:nth-child(3) {
-  position: absolute;
   height: 320px;
   width: 300px;
   top: 300px;
@@ -140,134 +131,117 @@ nav a:hover {
   transform: rotate(-39deg);
   z-index: 4;
 }
+
 .Home-Photos img:nth-child(5) {
-	height: 250px;
-	width: 200px;
-	top: -80px;
-	left: 140px;
-	transform: rotate(40deg);
-	z-index: 4;
+  height: 250px;
+  width: 200px;
+  top: -80px;
+  left: 140px;
+  transform: rotate(40deg);
+  z-index: 4;
 }
 
-#Music{
-	padding: 35px;
-	margin-top: 30px;   	
-	margin-left: 95px;
-	border-width: 4px;
-	border-style: solid;
-	border-color: #fca2e9;
-	width: 1300px;  
-	height: 5px; 
-	border-radius: 60px;
-	box-shadow: 500px 0 0px 0px #fff0fc, -500px 0 0px 0px #fff0fc, inset 0 0 5px #ffb3f1; ;
+#Music {
+  padding: 35px;
+  margin-top: 30px;
+  margin-left: 95px;
+  border: 4px solid #fca2e9;
+  width: 1300px;
+  border-radius: 60px;
+  box-shadow: 500px 0 0px 0px #fff0fc, -500px 0 0px 0px #fff0fc, inset 0 0 5px #ffb3f1;
 }
-
 
 .controls img {
-	width: 40px;            
-	height: 40px;
-	cursor: pointer;       
-	user-select: none; 
-	
-	margin: 0 10px;         
-	transition: opacity 0.3s ease;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 10px;
+  transition: opacity 0.3s ease;
 }
 
 .controls img:hover {
-  opacity: 0.7;   
-	
+  opacity: 0.7;
 }
 
 .subtitle {
-	font-size: 20px;
-	color: #ffe2f9;
-	font-family: 'Dancing Script', cursive;
-	text-align: center;
-	margin-top: -10px;
+  font-size: 20px;
+  color: #ffe2f9;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  margin-top: -10px;
 }
 
 .playlist-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	padding: 30px;
-	font-family: 'Segoe UI', sans-serif;
-}
-
-.subtitle {
-	top: 100px;
-	font-size: 1rem;
-	color: #ffe2f9;
-	margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .album-art img {
-	margin-bottom: 20px;
-	max-width: 100%;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .song-info h3 {
-	font-size: 1.5rem;
-	margin: 10px 0 5px;
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
 }
 
 .song-info .artist {
-	font-size: 1rem;
-	color: #444;		margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
 }
 
 .progress-container {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .progress-bar {
-	width: 200px;
-	accent-color: #ffe4f7; 
-}
-.controls {
-	display: flex;
-	justify-content: center;
-	gap: 0px;
-	margin-top: 20px;
+  width: 200px;
+  accent-color: #ffe4f7;
 }
 
-.controls img {
-	gap:50px;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.2s ease;
-	
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 20px;
 }
+
 .controls img:hover {
-	background-color: #ff8fc4;
-	transform: scale(1.1);
-	outline: none;
-	border: none;
+  background-color: #ff8fc4;
+  transform: scale(1.1);
+  outline: none;
+  border: none;
 }
-#prev{
-	position: relative;
-	top: -12px;
-	left: 0px;
+
+#prev {
+  position: relative;
+  top: -12px;
 }
-#play{
-	width: 110px ;
-	height: 45px;
-	position: relative;
-	top: -10px;
-	left: 0px;
+
+#play {
+  width: 110px;
+  height: 45px;
+  position: relative;
+  top: -10px;
 }
-#next{
-	height: 38px;
-	width: 48px;
-	position: relative;
-	top: -4px;
-	left: 5px;
+
+#next {
+  height: 38px;
+  width: 48px;
+  position: relative;
+  top: -4px;
 }
+
 .book-section {
   display: flex;
   justify-content: center;
@@ -276,17 +250,20 @@ nav a:hover {
   position: relative;
   background-color: #fffafc;
 }
+
 .book-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-}
+
 .book {
-  width: 400px;
+  width: 570px;
+  height: 450px;
   z-index: 1;
 }
+
 .flower {
   position: absolute;
   opacity: 0;
@@ -295,91 +272,30 @@ nav a:hover {
   z-index: 0;
   animation: rotateFlower 8s linear infinite;
 }
-.book{
-	width:570px;
-	height: 450px;
-}
-.f1 {
-	width: 70px;
-	height: 70px;
-	bottom: 400px;
-	right: 600px;
-}
-	
-.f2 { 
-	bottom: 170px;
-	right: 800px;
-	width: 100px;
-	height: 100px; 
-}
-.f3 { bottom: -150px; 
-	right: 340px; 
-	width: 100px;
-	height: 100px; 
-}
-.f4 { 
-	bottom: -170px;
-	right: 900px;
-	width: 130px;
-	height: 130px; 
-}
-.f5 { 
-	bottom: 350px;
-	right: 900px;
-	width: 140px;
-	height: 140px; 
-}
-.f6 { 
-	bottom: 420px;
-	right: 160px;
-	width: 120px;
-	height: 120px; 
-}
-.f7{
-	bottom: 100px;
-	left: 900px;
-	width: 140px;
-	height: 140px; 
-}
-.f8{
-	bottom: 170px;
-	left: 680px;
-	width: 100px;
-	height: 100px; 
-}
-.f9{
-	bottom: 400px;
-	left: 900px;
-	width: 70px;	
-	height: 70px; 
-}
-.f10{
-	bottom: -240px;
-	left: 640px;
-	width: 300px;	
-	height: 300px;	
-}
-.f11{
-	bottom: 0px;
-	right: 630px;
-	width: 120px;	
-	height: 120px;	
-}
+
+.f1 { bottom: 400px; right: 600px; width: 70px; height: 70px; }
+.f2 { bottom: 170px; right: 800px; width: 100px; height: 100px; }
+.f3 { bottom: -150px; right: 340px; width: 100px; height: 100px; }
+.f4 { bottom: -170px; right: 900px; width: 130px; height: 130px; }
+.f5 { bottom: 350px; right: 900px; width: 140px; height: 140px; }
+.f6 { bottom: 420px; right: 160px; width: 120px; height: 120px; }
+.f7 { bottom: 100px; left: 900px; width: 140px; height: 140px; }
+.f8 { bottom: 170px; left: 680px; width: 100px; height: 100px; }
+.f9 { bottom: 400px; left: 900px; width: 70px; height: 70px; }
+.f10 { bottom: -240px; left: 640px; width: 300px; height: 300px; }
+.f11 { bottom: 0px; right: 630px; width: 120px; height: 120px; }
 
 .flower.show {
   opacity: 1;
   transform: scale(1) translateY(-50px);
 }
-.flower.hover{
-	transform: scale(1.1) translateY(-50px);
-}
 
 @keyframes rotateFlower {
   0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(20deg)  scale(1); }
+  50% { transform: rotate(20deg) scale(1); }
   100% { transform: rotate(0deg) scale(1); }
 }
 
-.Updates{
-	text-align:center;
+.Updates {
+  text-align: center;
 }
